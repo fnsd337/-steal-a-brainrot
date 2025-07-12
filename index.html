@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر البتات - Steal a Brainrot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-coins"></i>
+                <span>متجر tem chees</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#about">حولنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span id="welcomeUser" style="display:none;"></span>
+                <button id="loginBtn" class="login-btn"><i class="fas fa-user"></i> دخول</button>
+                <button id="logoutBtn" class="logout-btn" style="display:none;"><i class="fas fa-sign-out-alt"></i> خروج</button>
+                <button id="langToggle" class="lang-btn" title="تغيير اللغة"><i class="fas fa-globe"></i> EN</button>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">أفضل البتات لخريطة Steal a Brainrot</h1>
+            <p class="hero-subtitle">احصل على البتات بأفضل الأسعار وأسرع التوصيل</p>
+            <div id="heroWelcome" style="display:none;margin-bottom:1rem;font-weight:700;font-size:1.2rem;"></div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span>1000+ عميل</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-star"></i>
+                    <span>4.9/5 تقييم</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>توصيل فوري</span>
+                </div>
+            </div>
+            <a href="#products" class="cta-button">تسوق الآن</a>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card">
+                <i class="fas fa-coins"></i>
+                <span>1000 بت</span>
+            </div>
+        </div>
+    </section>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">البِتات المتوفرة</h2>
+            <div class="products-grid">
+                <div class="product-card" data-bits="100">
+                    <div class="product-header">
+                        <img src="los-tralaleritos.png" alt="Los Tralaleritos" class="product-img" style="width:90px;display:block;margin:0 auto 10px;">
+                        <i class="fas fa-coins"></i>
+                        <h3>Los Tralaleritos</h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">$4.00</span>
+                        <span class="robux-price">/ 350 روبوكس</span>
+                        <span class="original-price">$4.99</span>
+                    </div>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> توصيل فوري</li>
+                        <li><i class="fas fa-check"></i> ضمان استرداد</li>
+                        <li><i class="fas fa-check"></i> دعم 24/7</li>
+                    </ul>
+                    <button class="buy-button" onclick="buyBits(100, 2.99)">
+                        <i class="fas fa-shopping-cart"></i>
+                        شراء الآن
+                    </button>
+                </div>
+                <div class="product-card featured" data-bits="500">
+                    <div class="product-badge">الأكثر طلباً</div>
+                    <div class="product-header">
+                        <img src="sammyni-spiderini.png" alt="Sammyni Spiderini" class="product-img" style="width:90px;display:block;margin:0 auto 10px;">
+                        <i class="fas fa-coins"></i>
+                        <h3>Sammyni Spiderini <span style='color:#ffd700;font-size:0.9em;'>(جديد)</span></h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">$3.00</span>
+                        <span class="original-price">$5</span>
+                        <span class="robux-price">/ 250 روبوكس</span>
+                    </div>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> توصيل فوري</li>
+                        <li><i class="fas fa-check"></i> ضمان استرداد</li>
+                        <li><i class="fas fa-check"></i> دعم 24/7</li>
+                        <li><i class="fas fa-check"></i> هدية مجانية</li>
+                    </ul>
+                    <button class="buy-button" onclick="buyBits(500, 9.99)">
+                        <i class="fas fa-shopping-cart"></i>
+                        شراء الآن
+                    </button>
+                </div>
+                <div class="product-card" data-bits="1000">
+                    <div class="product-header">
+                        <img src="la-vacca-saturno.png" alt="La Vacca Saturno Saturnita" class="product-img" style="width:90px;display:block;margin:0 auto 10px;">
+                        <i class="fas fa-coins"></i>
+                        <h3>La Vacca Saturno Saturnita</h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">$1.99</span>
+                        <span class="original-price">$3.99</span>
+                        <span class="robux-price">/ 200 روبوكس</span>
+                    </div>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> توصيل فوري</li>
+                        <li><i class="fas fa-check"></i> ضمان استرداد</li>
+                        <li><i class="fas fa-check"></i> دعم 24/7</li>
+                        <li><i class="fas fa-check"></i> هدايا مجانية</li>
+                    </ul>
+                    <button class="buy-button" onclick="buyBits(1000, 17.99)">
+                        <i class="fas fa-shopping-cart"></i>
+                        شراء الآن
+                    </button>
+                </div>
+                <div class="product-card" data-bits="2000">
+                    <div class="product-header">
+                        <img src="la-grande-combinazione.png" alt="La Grande Combinazione" class="product-img" style="width:90px;display:block;margin:0 auto 10px;">
+                        <i class="fas fa-coins"></i>
+                        <h3>La Grande Combinazione</h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">$49.99</span>
+                        <span class="original-price">$69.99</span>
+                        <span class="robux-price">/ 3999 روبوكس</span>
+                    </div>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> توصيل فوري</li>
+                        <li><i class="fas fa-check"></i> ضمان استرداد</li>
+                        <li><i class="fas fa-check"></i> دعم 24/7</li>
+                        <li><i class="fas fa-check"></i> هدايا مجانية</li>
+                        <li><i class="fas fa-check"></i> VIP دعم</li>
+                    </ul>
+                    <button class="buy-button" onclick="buyBits(2000, 29.99)">
+                        <i class="fas fa-shopping-cart"></i>
+                        شراء الآن
+                    </button>
+                </div>
+                <div class="product-card" data-bits="3000">
+                    <div class="product-header">
+                        <img src="graipuss-medussi.png" alt="Graipuss Medussi" class="product-img" style="width:90px;display:block;margin:0 auto 10px;">
+                        <i class="fas fa-coins"></i>
+                        <h3>Graipuss Medussi</h3>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">$8</span>
+                        <span class="robux-price">/ 700 روبوكس</span>
+                    </div>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check"></i> توصيل فوري</li>
+                        <li><i class="fas fa-check"></i> ضمان استرداد</li>
+                        <li><i class="fas fa-check"></i> دعم 24/7</li>
+                        <li><i class="fas fa-check"></i> هدايا مجانية</li>
+                        <li><i class="fas fa-check"></i> VIP دعم</li>
+                    </ul>
+                    <button class="buy-button" onclick="buyBits(3000, 0)">
+                        <i class="fas fa-shopping-cart"></i>
+                        شراء الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>لماذا تختار متجرنا؟</h2>
+                    <div class="features-list">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h3>توصيل فوري</h3>
+                                <p>احصل على البتات خلال دقائق من الشراء</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h3>آمن 100%</h3>
+                                <p>معاملات آمنة ومشفرة لحماية معلوماتك</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h3>دعم 24/7</h3>
+                                <p>فريق دعم متاح على مدار الساعة لمساعدتك</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo"></i>
+                            <div>
+                                <h3>ضمان استرداد</h3>
+                                <p>استرداد كامل للمبلغ في حالة أي مشكلة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="stats-card">
+                        <div class="stat-item">
+                            <span class="stat-number">5000+</span>
+                            <span class="stat-label">عميل سعيد</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">بت تم بيعها</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">معدل رضا</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">الأسئلة الشائعة</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>كيف أستلم البتات بعد الشراء؟</h3>
+                    <p>سيتم التواصل معك عبر ديسكورد أو روبلوكس لتسليم البتات خلال دقائق.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>هل يمكنني الدفع بروبوكس فقط؟</h3>
+                    <p>نعم، يمكنك الدفع بروبوكس أو بطرق أخرى مثل البطاقات والعملات الرقمية.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>هل يوجد ضمان استرداد؟</h3>
+                    <p>نعم، إذا واجهت أي مشكلة ولم تستلم البتات يمكنك استرداد أموالك بالكامل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">اتصل بنا</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <div>
+                            <h3>Discord</h3>
+                            <p><a href="https://discord.gg/example" target="_blank">discord.gg/example</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-twitter"></i>
+                        <div>
+                            <h3>Twitter</h3>
+                            <p><a href="https://twitter.com/temchees" target="_blank">@temchees</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:support@temchees.com">support@temchees.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/xnnvkorg" method="POST" class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="اسمك" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="رسالتك" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-paper-plane"></i>
+                        إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <!-- تم حذف قسم آراء العملاء بناءً على طلب المستخدم -->
+    <!-- زر صعود لأعلى -->
+    <button id="scrollToTop" class="scroll-to-top" title="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر البتات</h3>
+                    <p>أفضل متجر لبيع البتات في Roblox</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#products">المنتجات</a></li>
+                        <li><a href="#about">حولنا</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>الدعم</h3>
+                    <ul>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">سياسة الاسترداد</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 متجر البتات. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Purchase Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>إتمام الشراء</h2>
+            <div class="purchase-details">
+                <div class="purchase-item">
+                    <i class="fas fa-coins"></i>
+                    <span id="modalBits">0</span> بت
+                </div>
+                <div class="purchase-price">
+                    السعر: $<span id="modalPrice">0</span>
+                </div>
+            </div>
+            <form id="purchaseForm">
+                <div class="form-group">
+                    <label for="robloxUsername">اسم المستخدم في Roblox:</label>
+                    <input type="text" id="robloxUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">طريقة الدفع:</label>
+                    <select id="paymentMethod" required>
+                        <option value="">اختر طريقة الدفع</option>
+                        <option value="robux">روبوكس</option>
+                        <option value="card">بطاقة ائتمان</option>
+                        <option value="crypto">عملات رقمية</option>
+                    </select>
+                </div>
+                <button type="submit" class="purchase-button">
+                    <i class="fas fa-lock"></i>
+                    إتمام الشراء الآمن
+                </button>
+            </form>
+        </div>
+    </div>
+    <div id="loginModal" class="modal">
+        <div class="modal-content login-modal-content">
+            <span class="close" id="closeLoginModal">&times;</span>
+            <h2>تسجيل الدخول</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">اسم المستخدم:</label>
+                    <input type="text" id="loginUsername" placeholder="ادخل اسم المستخدم" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">كلمة المرور:</label>
+                    <input type="password" id="loginPassword" placeholder="ادخل كلمة المرور" required>
+                </div>
+                <button type="submit" class="login-submit-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    دخول
+                </button>
+            </form>
+            <button id="showRegisterBtn" class="register-btn">إنشاء حساب جديد</button>
+        </div>
+    </div>
+    <div id="registerModal" class="modal">
+        <div class="modal-content login-modal-content">
+            <span class="close" id="closeRegisterModal">&times;</span>
+            <h2>إنشاء حساب جديد</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerUsername">اسم المستخدم:</label>
+                    <input type="text" id="registerUsername" placeholder="ادخل اسم المستخدم" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">كلمة المرور:</label>
+                    <input type="password" id="registerPassword" placeholder="ادخل كلمة المرور" required>
+                </div>
+                <button type="submit" class="login-submit-btn">
+                    <i class="fas fa-user-plus"></i>
+                    تسجيل
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,14 @@
+{
+  "name": "متجر البتات - Steal a Brainrot",
+  "short_name": "Bits Store",
+  "description": "أفضل متجر لبيع البتات في خريطة Steal a Brainrot في Roblox",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [],
+  "categories": ["games", "shopping", "entertainment"],
+  "lang": "ar",
+  "dir": "rtl"
+}
